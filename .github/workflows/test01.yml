@@ -33,6 +33,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo ${{ secrets.PG_PASS }} > chave.pem
+          echo ${{ var.DB_HOST }}
           chmod 600 chave.pem
           ls -all
           cat chave.pem
